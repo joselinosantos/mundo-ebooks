@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block 'conteudo' %}
+<div class="row mt-5">
+   <div class="col-6">
+       <img class="img_livro" src="{{ livro.capa.url }}" alt="" width="400" height="600">
+       <a href="" class="text-warning">
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+       </a>
+   </div>
+   <div class="col-6">
+       <h1 class="display-5">{{ livro.titulo }}</h1>
+       <h2>{{ livro.autor }}</h2>
+       <button class="btn btn-primary">Comprar</button>
+   </div>
+</div>
+<div class="listas">
+   <a href="" title="Minha lista"><i class="fa fa-list"></i> Adicionar a minha lista</a>
+   <a href="" title="Minhas leituras"><i class="fa fa-eye"></i> Marcar como lido</a>
+   <a href="" title="Favoritar"><i class="fa fa-heart"></i> Favorito</a>
+</div>
+<div class="row p-3">
+   <div class="btn-group" role="group" aria-label="Basic example">
+     <button type="button" class="btn btn-dark p-4">EPUB</button>
+     <button type="button" class="btn btn-dark p-4">PDF</button>
+     <button type="button" class="btn btn-dark p-4">Mobi</button>
+     <button type="button" class="btn btn-dark p-4">Ler Online</button>
+   </div>
+   <div>
+       <h3>Descrição</h3>
+   <p class="lead">Descrição do livro
+Uma parábola sobre os tempos atuais, por um de nossos maiores pensadores indígenas.
+Ailton Krenak nasceu na região do vale do rio Doce, um lugar cuja ecologia se encontra profundamente afetada pela atividade de extração mineira. Neste livro, o líder indígena critica a ideia de humanidade como algo separado da natureza, uma “humanidade que não reconhece que aquele rio que está em coma é também o nosso avô”.
+Essa premissa estaria na origem do desastre socioambiental de nossa era, o chamado Antropoceno. Daí que a resistência indígena se dê pela não aceitação da ideia de que somos todos iguais. Somente o reconhecimento da diversidade e a recusa da ideia do humano como superior aos demais seres podem ressignificar nossas existências e refrear nossa marcha insensata em direção ao abismo.
+“Nosso tempo é especialista em produzir ausências: do sentido de viver em sociedade, do próprio sentido da experiência da vida. Isso gera uma intolerância muito grande com relação a quem ainda é capaz de experimentar o prazer de estar vivo, de dançar e de cantar. E está cheio de pequenas constelações de gente espalhada pelo mundo que dança, canta e faz chover. […] Minha provocação sobre adiar o fim do mundo é exatamente sempre poder contar mais uma história.”
+Desde seu inesquecível discurso na Assembleia Constituinte, em 1987, quando pintou o rosto com a tinta preta do jenipapo para protestar contra o retrocesso na luta pelos direitos indígenas, Krenak se destaca como um dos mais originais e importantes pensadores brasileiros. Ouvi-lo é mais urgente do que nunca. Ideias para adiar o fim do mundo é uma adaptação de duas conferências e uma entrevista realizadas em Portugal, entre 2017 e 2019.</p>
+</div>
+   </div>
+
+<div>
+   <h3>Livros Relacionados</h3>
+</div>
+<div class="row">
+
+    <div class="col-3 pb-3">
+       <a href="" class="livros-link"><img class="img_livro" src="{{ livro.capa.url }}" alt="" width="200" height="300"></a>
+       <span class="liv-titulo">
+       </span>
+       <button class="btn btn-primary btn-read">Ler ou Comprar</button>
+    </div>
+
+ </div>
+ {% endblock %}

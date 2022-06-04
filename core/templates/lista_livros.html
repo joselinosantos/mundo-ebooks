@@ -1,0 +1,43 @@
+<div>
+    <h3 class="font-weight-bold">Livros em Destaque</h3>
+    <div class="row">
+      {% if livros %}
+       {% for livro in livros %}
+       <div class="col-3 pb-3">
+        <div class="row livro-content">
+          <div class="container">
+             <a href="{% url 'livro_detalhes' livro.id %}" class="livros-link"><img class="img_livro" src="{{ livro.capa.url }}" alt="" width="200" height="300"></a>
+          <span class="liv-titulo">
+            <!-- titulo > 30 -->
+            {{ livro.titulo }}
+          </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="container">
+             <button class="btn btn-primary btn-read">Ler online ou Comprar</button>
+          </div>
+        </div>
+       </div>
+      {% endfor %}
+      {% else %}
+      <h3>Nenhum livro encontrado</h3>
+      {% endif %}
+
+      {% include 'partial/_pagination.html' %}
+
+    </div>
+
+    <h3 class="font-weight-bold">Últimas publicações</h3>
+    <div class="row">
+
+       <div class="col-3 pb-3">
+          <img class="img_livro" src="{{ livro.capa.url }}" alt="" width="200" height="300">
+          <span class="liv-titulo">
+
+          </span>
+          <button class="btn btn-primary btn-read">Ler ou Comprar</button>
+       </div>
+
+    </div>
+  </div>
