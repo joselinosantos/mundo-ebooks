@@ -1,4 +1,4 @@
-# Mundo Ebooks is ebook site
+# Mundo Ebooks is an ebook site
 ![Mundo Ebooks](https://github.com/joselinosantosti/mundo-ebooks/blob/main/mundo-ebooks.png)
 
 ## Getting start
